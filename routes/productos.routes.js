@@ -12,9 +12,9 @@ router.get("/", (req, res)=>{
     })
 
     router.post("/", (req, res)=>{
-        const producto = req.body
-        saveFile(producto)
-        res.json("El producto se a pedido correctamente")
+        const productos = req.body
+        saveFile(productos)
+        res.json("El producto se a pedido exitosamente")
         })
 
     function readFile(){
@@ -25,10 +25,10 @@ router.get("/", (req, res)=>{
 
     function saveFile(productos){
     const contenidoActual = readFile()
-    const todosLosId = contenidoActual.map((productos) => productos.id)
-    const nuevoId = Math.max(...todosLosId, 0) + 1
+    const todosLosId = contenidoActual.map((producto) => producto.Id)
+    const nuevoId = Math.max(...todosLosId, 0 )+ 1
 
-    const nuevoProducto = {...productos, id: nuevoId}
+    const nuevoProducto = {...productos, Id: nuevoId}
 
     const contenidoNuevo = [...contenidoActual, nuevoProducto]
 

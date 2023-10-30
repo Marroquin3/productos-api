@@ -12,6 +12,6 @@ app.use("/api/productos", productosRoutes)
 
 
 
-app.listen(3001, ()=>{
+app.listen(3000, ()=>{
 console.log(" <3 Server is runing on http://localhost" + PORT)
 })
