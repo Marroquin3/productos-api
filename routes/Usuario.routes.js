@@ -32,7 +32,7 @@ router.post("/create", (req, res) => {
 
     const usuarioExistente = usuarios.find(user => user.Correo === Correo);
     if (usuarioExistente) {
-        return res.status(400).json({ message: 'El nombre de usuario ya está en uso' });
+        return res.status(400).json({ message: 'El correo ya existe' });
     }
 
     
