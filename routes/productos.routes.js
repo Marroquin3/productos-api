@@ -26,7 +26,7 @@ router.get("/", (req, res)=>{
             return res.status(404).json({message: 'El producto no se encontro' })
         }
 
-        const productosEliminado = productos.splice(productosIndex, 1)
+        const productosEliminado = producto.splice(productosIndex, 1)
 
         fs.writeFileSync(readFile, JSON.stringify(productos, null, 2))
     
@@ -52,3 +52,5 @@ router.get("/", (req, res)=>{
     fs.writeFileSync(productosFile, JSON.stringify(contenidoNuevo), null, 2);   
 }
     export default router
+
+
