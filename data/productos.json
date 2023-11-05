@@ -1,29 +1,29 @@
 [
-    {
+  {
     "Id": 1,
     "Productos": "Hamburguesa",
     "imagen": "https://www.saborusa.com/ni/wp-content/uploads/sites/19/2019/11/Calma-tus-antojos-con-deliciosas-y-rapidas-recetas-Foto-destacada.png",
     "Descripcion": "Hamburguesa de res con vegetales frescos y tocino",
     "Cantidad": null,
-    "Precio": 5.50,
+    "Precio": 5.5,
     "Total": null
   },
   {
     "Id": 2,
-    "Productos": "Pastel",
+    "Productos": "Pastel de chocolate",
     "imagen": "https://cdn2.cocinadelirante.com/sites/default/files/images/2023/08/receta-de-pastel-de-chocolate-facil.jpg",
-    "Descripcion": "Patel de chcocolate con fresas y jalea de fresa",
+    "Descripcion": "Pastel de chcocolate con fresas y jalea de fresa",
     "Cantidad": null,
-    "Precio": 6.50,
+    "Precio": 6.5,
     "Total": null
   },
   {
     "Id": 3,
-    "Productos": "Pastel",
+    "Productos": "Pastel de fruta",
     "imagen": "https://ds1e83w8pn0gs.cloudfront.net/fotosmultisite/502613-1.jpg",
     "Descripcion": "Paste de frutas con jalea de melocotón",
     "Cantidad": null,
-    "Precio": 4.50,
+    "Precio": 4.5,
     "Total": null
   },
   {
@@ -32,7 +32,7 @@
     "imagen": "https://img.taste.com.au/w_-0kcUJ/taste/2016/11/aussie-style-beef-and-salad-tacos-86525-1.jpeg",
     "Descripcion": "Tacos de res con sala de habanero",
     "Cantidad": null,
-    "Precio": 5.50,
+    "Precio": 5.5,
     "Total": null
   },
   {
@@ -41,8 +41,8 @@
     "imagen": "https://www.foodandwine.com/thmb/Wd4lBRZz3X_8qBr69UOu2m7I2iw=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/classic-cheese-pizza-FT-RECIPE0422-31a2c938fc2546c9a07b7011658cfd05.jpg",
     "Descripcion": "Pizza de queso con queso a las orrillas",
     "Cantidad": null,
-    "Precio": 7.50,
-    "Total":null
+    "Precio": 7.5,
+    "Total": null
   },
   {
     "Id": 6,
@@ -50,7 +50,52 @@
     "imagen": "https://cdn.kiwilimon.com/brightcove/8626/8626.jpg",
     "Descripcion": "Burritos de res con salsa de abanero",
     "Cantidad": null,
-    "Precio": 3.50,
+    "Precio": 3.5,
     "Total": null
+  },
+  {
+    "Productos": "Tres Leches",
+    "imagen": "https://cdn0.recetasgratis.net/es/posts/0/1/9/torta_tres_leches_8910_600.webp",
+    "Descripcion": "Tres Leches con leche condensada y pan suavecito",
+    "Cantidad": null,
+    "Precio": 2.5,
+    "Total": null,
+    "Id": 7
+  },
+  {
+    "Productos": "Lasaña De carne",
+    "imagen": "https://cdn.colombia.com/gastronomia/2015/06/09/lasana-de-carne-y-queso-2977.jpg",
+    "Descripcion": "Lasaña de carne de res con extra queso acompañada con salsa de tomate",
+    "Cantidad": null,
+    "Precio": 3.2,
+    "Total": null,
+    "Id": 8
+  },
+  {
+    "Productos": "Pollo en crema de hongos",
+    "imagen": "https://www.mamacorajes.com/wp-content/uploads/2020/09/Pechugas-de-pollo-con-salsa-de-champi%C3%B1%C3%B3n.jpg",
+    "Descripcion": "Pollo bañado en crema de hongos acompañado de ensalada",
+    "Cantidad": null,
+    "Precio": 3.2,
+    "Total": null,
+    "Id": 9
+  },
+  {
+    "Productos": "Brazo Gitano",
+    "imagen": "https://unareceta.com/wp-content/uploads/2017/10/brazo-de-gitano.jpg",
+    "Descripcion": "Brazo Gitano relleno de chocolate con Jalea de fresa",
+    "Cantidad": null,
+    "Precio": 1.2,
+    "Total": null,
+    "Id": 10
+  },
+  {
+    "Productos": "Torta Mexicana",
+    "imagen": "https://www.guatemala.com/fotos/2020/06/Tortas-mexicanas-2.jpg",
+    "Descripcion": "Torta Mexicana con carne de res y pechiga de pollo",
+    "Cantidad": null,
+    "Precio": 4.7,
+    "Total": null,
+    "Id": 11
   }
 ]

@@ -1,56 +1,54 @@
-import { Router } from 'express'
-import fs from 'fs'
-import path from 'path'
+import { Router } from 'express';
+import fs from 'fs';
+import path from 'path';
 
-const router = Router()
+const router = Router();
 
-const productosFile = path.join(process.cwd(), "data", "productos.json")
+const productosFile = path.join(process.cwd(), "data", "productos.json");
 
-router.get("/", (req, res)=>{
-    const productos = readFile()
-    res.json(productos)
-    })
+router.get("/", (req, res) => {
+    const productos = readFile();
+    res.json(productos);
+});
 
-    router.post("/", (req, res)=>{
-        const productos = req.body
-        saveFile(productos)
-        res.json("El producto se a pedido exitosamente")
-        })
+router.post("/", (req, res) => {
+    const newProducto = req.body;
+    saveFile(newProducto);
+    res.json("El producto se ha guardado exitosamente");
+});
 
-        router.delete("/:Id", (req, res)=>{
-        const todosLosId = parseInt(req.params.Id)
-        const productos = productos()
-        
-        const productosIndex = productos.findIndex(productos => productos.Id === todosLosId);
-        if(productosIndex <=0){
-            return res.status(404).json({message: 'El producto no se encontro' })
-        }
+router.delete("/:Id", (req, res) => {
+    const productoId = parseInt(req.params.Id);
+    const productos = readFile();
 
-        const productosEliminado = producto.splice(productosIndex, 1)
-
-        fs.writeFileSync(readFile, JSON.stringify(productos, null, 2))
-    
-        res.json({message: 'El producto se elimino correctamente', productos, productosEliminado})
-        })
-
-    function readFile(){
-        const result = fs.readFileSync(productosFile, "utf-8")
-        const json = JSON.parse(result)
-        return json
+    const productoIndex = productos.findIndex(producto => producto.Id === productoId);
+    if (productoIndex === -1) {
+        return res.status(404).json({ message: 'El producto no se encontró' });
     }
 
-    function saveFile(productos){
-    const contenidoActual = readFile()
-    const todosLosId = contenidoActual.map((producto) => producto.Id)
-    const nuevoId = Math.max(...todosLosId, 0 )+ 1
+    const productoEliminado = productos.splice(productoIndex, 1);
+    saveFile(productos);
 
-    const nuevoProducto = {...productos, Id: nuevoId}
+    res.json({ message: 'El producto se eliminó correctamente', productos, productoEliminado });
+});
 
-    const contenidoNuevo = [...contenidoActual, nuevoProducto]
-
-
-    fs.writeFileSync(productosFile, JSON.stringify(contenidoNuevo), null, 2);   
+function readFile() {
+    const result = fs.readFileSync(productosFile, "utf-8");
+    const json = JSON.parse(result);
+    return json;
 }
-    export default router
 
+function saveFile(producto) {
+    const productos = readFile();
 
+    const todosLosId = productos.map((producto) => producto.Id);
+    const nuevoId = Math.max(...todosLosId, 0) + 1;
+
+    const nuevoProducto = { ...producto, Id: nuevoId };
+
+    const contenidoNuevo = [...productos, nuevoProducto];
+
+    fs.writeFileSync(productosFile, JSON.stringify(contenidoNuevo, null, 2));
+}
+
+export default router;
