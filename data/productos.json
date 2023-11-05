@@ -97,5 +97,14 @@
     "Precio": 4.7,
     "Total": null,
     "Id": 11
+  },
+  {
+    "Productos": "Chimichangas Mexicana",
+    "imagen": "https://spicysouthernkitchen.com/wp-content/uploads/Beef-Chimichangas-3.jpg",
+    "Descripcion": "chimichanga Mexicana con carne de res",
+    "Cantidad": null,
+    "Precio": 2.7,
+    "Total": null,
+    "Id": 12
   }
 ]
